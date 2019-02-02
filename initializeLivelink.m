@@ -1,0 +1,43 @@
+function out = initializeLivelink( )
+
+% This function initializes the connection between Comsol and Matlab
+% Livelink. It also returns the path where all the optimization Matlab files 
+% can be found. When the optimization has stopped or succeded, the user has
+% to stop the connection manually by closing the system terminal. If the user
+% tries to start a new optimization with an existing Comsol-Matlab
+% connection, an error message will be shown, thus there should be only one
+% connection open. In this case the user has to terminate the previous
+% connection before starting a new one.
+
+% clean the command window from previous command lines
+clc
+
+disp( 'Initialize connection with Comsol...' );
+
+% open the system terminal and run the Comsol Server
+% if this command cannot be executed, comment out this command and run manualy the COMSOL Multiphysics Server 5.2a
+system( 'C:\COMSOL52a\Multiphysics\COMSOL Launchers\COMSOL Multiphysics Server 5.2a.lnk &' );
+
+% store the current path, in order to return later on this place again
+HOME = pwd;
+
+% go to the Matlab-Livelink files
+cd( 'C:\COMSOL52a\Multiphysics\mli' );
+
+% start a connection with the predefined default port 2036
+mphstart( 2036 );
+
+% return again to the starting point
+cd( HOME );
+
+% import all the needed libraries
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+fprintf( '\nMatlab-Comsol connection is ready!\n\n' );
+
+% return the path where this Matlab file can be found
+out = HOME;
+
+end
+
