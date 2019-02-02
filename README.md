@@ -48,3 +48,8 @@ If the stopping criteria (e.g. B > 0.4 T) has been met, the model with the best 
 To start the program write this command:
 
 `[ <output_variables> ] = optimization( <input_variables> )`
+
+
+### Example of the optimised results
+
+ ![overview](https://github.com/sertopexamgio/genetic_algorithm_magnetic_drug_targeting/blob/master/HBL9zy2.png)
