@@ -1,14 +1,9 @@
-# magnetic_drug_targeting
+# Magnet arrangment optimisation through genetic algorithm for Magnetic Drug Targeting in Cancer Therapy
 Optimization Model for drug targeting systems
 
-The main function here is called "optimization".
-
-To start the program write this command:
-
-`[ <output_variables> ] = optimization( <input_variables> )`
-
-
 In this Project, magnet parameters of a magnet array will be optimized in order to maximize the average mean magnetic flux density in a tumor model. 
+COMSOL Multiphysics and Matlab Livelink are dependencies for this project.
+COMSOL is used to simulate the physics and extract the magentic field for a given set of parameters. Parameters will be adjusted through a matlab implementation of a genetic algorithm in order to find the optimum magnetic arrangement for a given Tumor.
 The user can set the number of magnets and by using a genetic algorithm, the magnet configurations with the highest magnetic flux densities will be extracted. 
 We use by default two variables, the height and the width of a magnet. This can also work for much more variables. 
 The user must give the numbers of magnet, that should be optimized.
@@ -44,3 +39,10 @@ It returns the average mean magnetic flux density in the constructed tumor domai
 
 ## saveComsolModel()
 If the stopping criteria (e.g. B > 0.4 T) has been met, the model with the best solution will be stored automatically. 
+
+
+The main function here is called "optimization".
+
+To start the program write this command:
+
+`[ <output_variables> ] = optimization( <input_variables> )`
