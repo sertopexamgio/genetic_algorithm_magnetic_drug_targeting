@@ -9,8 +9,8 @@ The user can set the number of magnets and by using a genetic algorithm, the mag
 We use by default two variables, the height and the width of a magnet. This can also work for much more variables. 
 The user must give the numbers of magnet, that should be optimized.
 
-    ![overview](https://github.com/sertopexamgio/genetic_algorithm_magnetic_drug_targeting/blob/master/overview.png)
-
+ ![overview](https://github.com/sertopexamgio/genetic_algorithm_magnetic_drug_targeting/blob/master/overview.png)
+    
 ### optimization()
 This is the main function of the project.
 To start the optimization you should call this function by giving the number of magnets, for e.g. optimization(3).
